@@ -175,11 +175,6 @@ body{
 }
 
 
-.img-darken {
-    transition: 1s;
-    filter: brightness(20%);
-}
-
 /* Project details Styles */
 .project-details{
     display: none;
