@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jacob DeGraftenreid Audio</title>
+    <meta name="author" content="Jacob DeGraftenreid"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/w3.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        jQuery(function() {
+            // Hide all the project details
+            jQuery('.hidden-details').hide();
+            // Show the default project
+            jQuery('#album-details-1').show();
+            //When clicking one of the thumbnails...
+            jQuery('.showDetails').click(function() {
+                // Hide all the project details
+                jQuery('.hidden-details').hide();
+                // show the project details corrosponding to the  thumbnail
+                jQuery('#album-details-' + $(this).attr('index')).show();
+            });
+        });
+    </script>
+    <script>
+        function slideingFunction() {
+            setTimeout(removeSliding, 400);
+            document.getElementById('project-details-animate').classList.add('w3-animate-right');
+            setTimeout(removeSliding, 400);
+        }
+    
+        function removeSliding() {
+            document.getElementById('project-details-animate').classList.remove('w3-animate-right');
+        }
+    </script>
+    <script>
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 300);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if (typeof window.getComputedStyle(document.body).backgroundBlendMode != 'undefined') {
+                $(".hidden-details").removeClass("no-background-blend-mode");
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    
+</head>
+
+<body>
+    <div id="background-image">
+        <div class="nav-wrapper">
+            <div class="nav-left-wrapper">
+                <div class="nav-link-wrapper">
+                    <a href="audio.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="resume.html">Resume</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="nav-right-wrapper">
+                <div class="brand">
+                    Jacob DeGraftenreid
+                </div>
+
+                <div class="linkedin-wrapper">
+                    <p id="linkedin-text">Find me on 
+                        <a href="https://www.linkedin.com/in/jacobdegraftenreid/">
+                            <img src="images/LI-Logo.png" height="15px">
+                        </a><br>
+                        <a class="developer-link" href="index.html">Find my developer page here</a>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div id="projects-and-details" class="w3-row">
+
+            <div class="w3-col w3-container m6 l5 w3-animate-left" id="main">
+                <h2>Selected Work</h2>
+                <div id="content-items-wrapper">
+                    <!-- Quichenight Thumbnail -->
+                    <div class="w3-col m6 l4 content-item-wrapper">
+                        <a class="showDetails" target="_self" index="1" href="#album-details-1" onclick="slideingFunction()">
+                            <div class="portfolio-img-background" style="background-image: url(images/Quichenight.jpg);"></div>
+                            <div class="w3-container w3-center img-text-wrapper">
+                                <div class="subtitle">
+                                    Quichenight
+                                </div>
+                            </div>
+                        </a>    
+                    </div>
+
+                    <!-- Nodaway Thumbnail -->
+                    <div class="w3-col m6 l4 content-item-wrapper">
+                        <a class="showDetails" target="_self" index="2" href="#album-details-2" onclick="slideingFunction()">
+                            <div class="portfolio-img-background" style="background-image: url(images/Nodaway.jpg);"></div>
+                            <div class="w3-container w3-center img-text-wrapper">
+                                <div class="subtitle">
+                                    Nodaway
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Darker Than Light Tumbnail -->
+                    <div class="w3-col m6 l4 content-item-wrapper">
+                        <a class="showDetails" target="_self" index="3" href="#album-details-3" onclick="slideingFunction()">
+                            <div class="portfolio-img-background" style="background-image: url(images/BobbyBare.jpg);"></div>
+                            <div class="w3-container w3-center img-text-wrapper">
+                                <div class="subtitle">
+                                    Bobby Bare
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--Couched Thumbnail -->
+                    <div class="w3-col m6 l4 content-item-wrapper">
+                        <a class="showDetails" target="_self" index="4" href="#album-details-4" onclick="slideingFunction()">
+                            <div class="portfolio-img-background" style="background-image: url(images/Couched.jpg);"></div>
+                            <div class="w3-container w3-center img-text-wrapper">
+                                <div class="subtitle">
+                                    COUCHED
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--Pujol Thumbnail -->
+                    <div class="w3-col m6 l4 content-item-wrapper">
+                        <a class="showDetails" target="_self" index="5" href="#album-details-5" onclick="slideingFunction()">
+                            <div class="portfolio-img-background" style="background-image: url(images/Pujol.jpg);"></div>
+                            <div class="w3-container w3-center img-text-wrapper">
+                                <div class="subtitle">
+                                    Pujol
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w3-row" id="other-artists">
+                    <h2>Other Artists</h2>
+                    <div class="w3-col w3-container m6 w3-animate-left">
+                        <ul style="list-style-type:disc">
+                            <li>Aaron Rochette</li>
+                            <li>B-Side Pilots</li>
+                            <li>Belmont University Choir</li>
+                            <li>Big Kenny</li>
+                            <li>David Beresford</li>
+                            <li>Dogtooth</li>
+                            <li>Idle Bloom</li>
+                         </ul>
+                    </div>
+                    <div class="w3-col w3-container m6 w3-animate-left">
+                        <ul style="list-style-type:disc">
+                            <li>Meltybrains?</li>
+                            <li>No Regrets Coyote</li>
+                            <li>Mikel Crews</li>
+                            <li>Omega Swan</li>
+                            <li>Ronald Marsh</li>
+                            <li>Stephen Mage</li>
+                         </ul>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div id="project-details-animate" class="w3-col m6 l7 w3-animate-right">
+                <div id="project-details">
+                    <!--Quichenight Details-->
+                    <div class="w3-row hidden-details no-background-blend-mode" id="album-details-1">
+                        <div class="w3-container">
+                            <h3>Quichenight: The Minor Sea</h3>
+
+                            <p>Engineer, Editing, and Mixing</p>
+                            <div class="custom-section w3-col">
+                                <iframe style="border: 0; width: 400px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album=1380311543/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless>
+                                    <a href="http://quichenight.bandcamp.com/album/the-minor-sea">The Minor Sea by Quichenight</a>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nodaway Details -->
+                    <div class="w3-row hidden-details no-background-blend-mode" id="album-details-2">
+                        <div class="w3-container">
+                            <h3>Nodaway: Waiting For</h3>
+
+                            <p>Producer, Engineer and Editing</p>
+                            <div class="custom-section w3-col">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/QaywlMxYqKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div class="w3-col w3-margin-bottom">
+                                Get the music <a href="https://www.pastemagazine.com/noisetrade/music/nodaway/waiting-for">here</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Darker Than Light Details -->
+                    <div class="w3-row hidden-details no-background-blend-mode" id="album-details-3">
+                        <div class="w3-container">
+                            <h3>Bobby Bare: Darker Than Light</h3>
+
+                            <p>Tracking and Overdub Assistant</p>
+                            <div class="custom-section">
+                                <iframe src="https://open.spotify.com/embed/album/3duBGUS9arvljXPz6B0Aq7" width="400" height="472" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Couched Details -->
+                    <div class="w3-row hidden-details no-background-blend-mode" id="album-details-4">
+                        <div class="w3-container">
+                            <h3>COUCHED: It's Not Clear</h3>
+
+                            <p>Mastering</p>
+                            <div class="custom-section">
+                                <iframe style="border: 0; width: 400px; height: 208px;" src="https://bandcamp.com/EmbeddedPlayer/album=3483946897/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless>
+                                    <a href="http://couched.bandcamp.com/album/its-not-clear">ITS NOT CLEAR by COUCHED</a>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pujol Details -->
+                    <div class="w3-row hidden-details no-background-blend-mode" id="album-details-5">
+                        <div class="w3-container">
+                            <h3>Pujol: Stinky Toy</h3>
+
+                            <p>Engineer, Mix and Master</p>
+                            <div class="custom-section">
+                                <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1306357090/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless>
+                                    <a href="http://pujoldotrocks.bandcamp.com/track/stinky-toy">Stinky Toy by Pujol</a>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div> 
+        
+        <!--<div class="push"></div>-->
+    </div>
+
+    <footer class="footer">
+        <div class="w3-col m12 l12 w3-container w3-center contact-wrapper">
+            <div class="contact-link-wrapper" id="contact">
+                <a href="contact.html">Contact Me</a>
+            </div>
+        </div>
+        <div class="footer-wrapper">
+            <div class="footer-text-wrapper">
+                <p>© Copyright 2020 Jacob DeGraftenreid. Website design by Jacob DeGraftenreid</p>
+            </div>
+        </div>
+    </footer> 
+</body>
+
+<script>
+    const contentItems = document.querySelectorAll('.content-item-wrapper')
+
+    contentItems.forEach(contentItem => {
+        contentItem.addEventListener('mouseover', () => {
+            /*console.log(contentItem.childNodes[1].classList);*/
+            contentItem.childNodes[1].classList.add('img-darken');
+        })
+
+        contentItem.addEventListener('mouseout', () => {
+            /*console.log(contentItem.childNodes[1].classList);*/
+            contentItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
+
+</html>

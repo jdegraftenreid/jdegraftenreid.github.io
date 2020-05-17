@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jacob DeGraftenreid Portfolio</title>
+    <meta name="author" content="Jacob DeGraftenreid"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/w3.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        jQuery(function() {
+            // Hide all the project details
+            jQuery('.hidden-details').hide();
+            // Show the default project
+            jQuery('#project-details-1').show();
+            //When clicking one of the thumbnails...
+            jQuery('.showDetails').click(function() {
+                // Hide all the project details
+                jQuery('.hidden-details').hide();
+                // show the project details corrosponding to the  thumbnail
+                jQuery('#project-details-' + $(this).attr('index')).show();
+            });
+        });
+    </script>
+    <script>
+        function slideingFunction() {
+            setTimeout(removeSliding, 400);
+            document.getElementById('project-details-animate').classList.add('w3-animate-right');
+            setTimeout(removeSliding, 400);
+        }
+    
+        function removeSliding() {
+            document.getElementById('project-details-animate').classList.remove('w3-animate-right');
+        }
+    </script>
+    <script>
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 300);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if (typeof window.getComputedStyle(document.body).backgroundBlendMode != 'undefined') {
+                $(".hidden-details").removeClass("no-background-blend-mode");
+            }
+        });
+    </script>
+    
+</head>
+
+<body>
+    <div id="background-image">
+        <div class="nav-wrapper">
+            <div class="nav-left-wrapper">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="resume.html">Resume</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="nav-right-wrapper">
+                <div class="brand">
+                    <div>Jacob DeGraftenreid</div>
+                </div>
+
+                <div class="linkedin-wrapper">
+                    <p>Find me on
+                        <a href="https://linkedin.com/in/jacob-degraftenreid-51327456/">
+                            <img src="images/logos/linkedin.png" height="15px">
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="projects-and-details" class="w3-row">
+
+            <div class="w3-col w3-container m6 l5 w3-animate-left" id="main">
+                <h2>Open Source Projects</h2>
+                <div id="content-items-wrapper">
+                    <!--Project 1 Thumbnail-->
+                    <div class="w3-col m6 l4 content-item-wrapper">
+                        <a class="showDetails" target="_self" index="1" href="#project-details-1" onclick="slideingFunction()">
+                            <div class="portfolio-img-background" style="background-image: url(images/bg1.jpg);"></div>
+                            <div class="w3-container w3-center img-text-wrapper">
+                                <div class="subtitle">
+                                    Test 1
+                                </div>
+                            </div>
+                        </a>    
+                    </div>
+
+                    <!--Porject 2 Thumbnail-->
+                    <div class="w3-col m6 l4 content-item-wrapper">
+                        <a class="showDetails" target="_self" index="2" href="#project-details-2" onclick="slideingFunction()">
+                            <div class="portfolio-img-background" style="background-image: url(images/bg2.jpg);"></div>
+                            <div class="w3-container w3-center img-text-wrapper">
+                                <div class="subtitle">
+                                    Test 2
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--Project3 Tumbnail-->
+                    <div class="w3-col m6 l4 content-item-wrapper">
+                        <a class="showDetails" target="_self" index="3" href="#project-details-3" onclick="slideingFunction()">
+                            <div class="portfolio-img-background" style="background-image: url(images/bg1.jpg);"></div>
+                            <div class="w3-container w3-center img-text-wrapper">
+                                <div class="subtitle">
+                                    Test 3
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--Project4 Thumbnail-->
+                    <div class="w3-col m6 l4 content-item-wrapper">
+                        <a class="showDetails" target="_self" index="4" href="#project-details-4" onclick="slideingFunction()">
+                            <div class="portfolio-img-background" style="background-image: url(images/bg2.jpg);"></div>
+                            <div class="w3-container w3-center img-text-wrapper">
+                                <div class="subtitle">
+                                    Test 4
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <div id="project-details-animate" class="w3-col m6 l7 w3-animate-right">
+                <div id="project-details">
+                    <!--Project1 Details-->
+                    <div class="w3-row hidden-details no-background-blend-mode" id="project-details-1">
+                        <div class="w3-container">
+                            <h3>Project 1</h3>
+
+                            <p>Project 1 does blah and more blah i began this project on blah and hope to finish soon.</p>
+                            <div class="custom-section">
+                                <a href="https://github.com" class="w3-col w3-button w3-border detail-buttons"><img src="images/logos/GitHub.png">GitHub</a>
+                            </div>
+                            
+                            <div class="w3-col w3-margin-bottom">
+                                Put an image or gif of project here!
+                            </div>
+
+                            <div class="w3-col l6">
+                                This is another placeholder for an item.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Project2 Details-->
+                    <div class="w3-row hidden-details no-background-blend-mode" id="project-details-2">
+                        <div class="w3-container">
+                            <h3>Project 2</h3>
+
+                            <p>Project 2 does blah and more blah i began this project on blah and hope to finish soon.</p>
+                            <div class="custom-section">
+                                <a href="https://github.com" class="w3-col w3-button w3-border detail-buttons"><img src="images/logos/GitHub.png">GitHub</a>
+                            </div>
+                            
+                            <div class="w3-col w3-margin-bottom">
+                                Put an image or gif of project here!
+                            </div>
+
+                            <div class="w3-col l6">
+                                This is another placeholder for an item.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Project3 Details-->
+                    <div class="w3-row hidden-details no-background-blend-mode" id="project-details-3">
+                        <div class="w3-container">
+                            <h3>Project 3</h3>
+
+                            <p>Project 3 does blah and more blah i began this project on blah and hope to finish soon.</p>
+                            <div class="custom-section">
+                                <a href="https://github.com" class="w3-col w3-button w3-border detail-buttons"><img src="images/logos/GitHub.png">GitHub</a>
+                            </div>
+                            
+                            <div class="w3-col w3-margin-bottom">
+                                Put an image or gif of project here!
+                            </div>
+
+                            <div class="w3-col l6">
+                                This is another placeholder for an item.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Project4 Details-->
+                    <div class="w3-row hidden-details no-background-blend-mode" id="project-details-4">
+                        <div class="w3-container">
+                            <h3>Project 4</h3>
+
+                            <p>Project 4 does blah and more blah i began this project on blah and hope to finish soon.</p>
+                            <div class="custom-section">
+                                <a href="https://github.com" class="w3-col w3-button w3-border detail-buttons"><img src="images/logos/GitHub.png">GitHub</a>
+                            </div>
+                            
+                            <div class="w3-col w3-margin-bottom">
+                                Put an image or gif of project here!
+                            </div>
+
+                            <div class="w3-col l6">
+                                This is another placeholder for an item.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div> 
+        <div class="w3-col m12 l12 w3-container w3-center contact-wrapper">
+            <div class="contact-link-wrapper">
+                <a href="contact.html">Contact Me</a>
+            </div>
+        </div>
+        
+    </div>
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-text-wrapper">
+                <p>© Copyright 2020 Jacob DeGraftenreid. Website design by Jacob DeGraftenreid</p>
+            </div>
+        </div>
+    </footer> 
+</body>
+
+<script>
+    const contentItems = document.querySelectorAll('.content-item-wrapper')
+
+    contentItems.forEach(contentItem => {
+        contentItem.addEventListener('mouseover', () => {
+            /*console.log(contentItem.childNodes[1].classList);*/
+            contentItem.childNodes[1].classList.add('img-darken');
+        })
+
+        contentItem.addEventListener('mouseout', () => {
+            /*console.log(contentItem.childNodes[1].classList);*/
+            contentItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
+
+</html>
